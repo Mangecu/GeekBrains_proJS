@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import "_normalize"
+
+*
+   font-family: 'Lato', sans-serif
+   color: #222222
+
+.container
+   max-width: 1140px
+   margin: 0 auto
+   padding: 0 10px 0 10px
+
+.header
+   min-height: 100px
+   background-color: #f8f3f4
+   .header__wrap
+      min-height: 100px
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: wrap
+      justify-content: center
+      a
+         font-size: 52px
+         font-weight: bold
+         flex-grow: 1
+      .header__cart
+         height: inherit
+         display: flex
+         flex-direction: row
+         align-items: center
+         i
+            font-size: 24px
+            margin-right: 10px
+         .btn-cart
+            font-size: 24px
+            font-family: "Lato", sans-serif
+            background-color: #ffffff
+            border: 2px solid #e8e8e8
+            padding: 2px 5px 2px 5px
+            border-radius: 5px
+
+.main
+   .items
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      flex-wrap: wrap
+      .item
+         display: flex
+         flex-direction: column
+         align-items: center
+         img
+            height: 224px
+            width: 204px
+         .item__name
+            font-size: 20px
+            font-weight: 600
+            margin-top: 7px
+         .item__price
+            font-size: 18px
+            font-weight: 600
+            margin-top: 10px
+         .item__btn
+            margin-top: 8px
+            font-family: 'Lato', sans-serif
+            font-size: 18px
+            background-color: #ffffff
+            border: 2px solid #e8e8e8
+            padding: 2px 5px 2px 5px
+            border-radius: 5px
+         &:not(:last-child)
+            margin-bottom: 10px
+
+
