@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import "_normalize"
+
+*
+   font-family: 'Lato', sans-serif
+   color: #222222
+
+.container
+   max-width: 1140px
+   margin: 0 auto
+   padding: 0 10px 0 10px
+
+.header
+   min-height: 100px
+   background-color: #f8f3f4
+   margin-bottom: 20px
+   .header__wrap
+      min-height: 100px
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: wrap
+      justify-content: center
+      a
+         font-size: 52px
+         font-weight: bold
+         flex-grow: 1
+      .header__cart
+         height: inherit
+         display: flex
+         flex-direction: row
+         align-items: center
+         i
+            font-size: 24px
+            margin-right: 10px
+         .btn-cart
+            font-size: 24px
+            font-family: "Lato", sans-serif
+            background-color: #ffffff
+            border: 2px solid #e8e8e8
+            padding: 2px 5px 2px 5px
+            border-radius: 5px
+
+.main
+   .main__wrap
+      .main__title
+         font-size: 20px
+         font-weight: 600
+         margin-bottom: 10px
+      .main__form
+         border: 2px solid #000000
+         border-radius: 10px
+         padding: 10px
+         max-width: 440px
+         .main__choice
+            display: flex
+            flex-direction: column
+            .main__param
+               display: flex
+               flex-direction: column
+               border: 2px solid
+               padding: 5px
+               border-radius: 5px
+               &:not(:last-child)
+                  margin-bottom: 10px
+               p
+                  font-size: 18px
+                  margin-bottom: 10px
+               div:not(:last-child)
+                  margin-bottom: 6px
+                  input
+                     padding-right: 5px
+         .main__btn
+            cursor: pointer
+            max-width: 121px
+            margin-top: 10px
+            background-color: #ffffff
+            border: 2px solid #222222
+            padding: 2px 5px 2px 5px
+            border-radius: 5px
+            text-transform: uppercase
+            font-weight: 600
+         .main__total
+            margin-top: 10px
+            border-top: 2px solid #222222
+            flex-direction: column
+            padding-top: 10px
+            p
+               &:not(:last-child)
+                  margin-bottom: 5px
+               span
+                  font-weight: 700
+         .hidden
+            display: none
+
+
+
+

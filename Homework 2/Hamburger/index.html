@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/style.css">
+   <title>Hamburger</title>
+</head>
+<body>
+   <header class="header">
+      <div class="header__wrap container">
+         <a href="index.html">Hamburger Bilder</a>
+         <div class="header__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button class="btn-cart">Корзина</button>
+         </div>
+      </div>
+   </header>
+   <main class="main container">
+      <div class="main__wrap">
+         <p class="main__title">Соберите свой гамбургер</p>
+         <form class="main__form">
+            <div class="main__choice">
+               <div class="main__param">
+                  <p>Выберите размер</p>
+                  <div>
+                     <input type="radio" id="1" value="small" data-price="50" data-cal="20"  name="size" checked>
+                     <label for="1">Маленький (50 рублей, 20 калорий)</label>
+                  </div>
+                  <div>
+                     <input type="radio" id="2" value="big" data-price="100" data-cal="40"  name="size">
+                     <label for="2">Большой (100 рублей, 40 калорий)</label>
+                  </div>
+               </div>
+               <div class="main__param">
+                  <p>С чем будет ваш гамбургер</p>
+                  <div>
+                     <input type="radio" id="3" value="with cheese" data-price="10" data-cal="20" name="filling" checked>
+                     <label for="3">С сыром (+10 рублей, +20 калорий)</label>
+                  </div>
+                  <div>
+                     <input type="radio" id="4" value="with salad" data-price="20" data-cal="5"  name="filling">
+                     <label for="4">С салатом (+20 рублей, +5 калорий)</label>
+                  </div>
+                  <div>
+                     <input type="radio" id="5" value="with potatoes" data-price="15" data-cal="10"  name="filling">
+                     <label for="5">С картофелем (+15 рублей, +10 калорий)</label>
+                  </div>
+               </div>
+               <div class="main__param">
+                  <p>Может быть что-то добавить</p>
+                  <div>
+                     <input type="checkbox" id="6" value="flavoring" data-price="15" data-cal="0" name="additives">
+                     <label for="6">Посыпать приправой (+15 рублей, +0 калорий)</label>
+                  </div>
+                  <div>
+                     <input type="checkbox" id="7" value="mayonnaise" data-price="20" data-cal="5" name="additives">
+                     <label for="7">Полить майонезом (+20 рублей, +5 калорий)</label>
+                  </div>
+               </div>
+            </div>
+            <div class="main__btn">Рассчитать</div>
+            <div class="main__total hidden">
+               <p class="main__total-price">
+                  Ваш гамбургер стоит: <span></span> руб.
+               </p>
+               <p class="main__total-calories">
+                  Вашем гамбургере содержиться: <span></span> кал.
+               </p>
+            </div>
+         </form>
+      </div>
+   </main>
+   <script src="https://kit.fontawesome.com/6de9621b6b.js" crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+</html>
