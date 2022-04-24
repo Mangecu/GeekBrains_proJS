@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 #task1 {
   display: flex;
   flex-direction: column;
-  padding: 50px 0 20px 0; }
+  margin-top: 50px; }
   #task1 .text {
     line-height: 25px;
     font-size: 20px; }
@@ -93,7 +93,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
     border: 2px solid #222222;
     border-radius: 5px;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-bottom: 20px; }
     #task1 div .btn1:first-child,
     #task1 div .btn2:first-child {
       margin-right: 100px; }
@@ -109,11 +110,31 @@ h1, h2, h3, h4, h5, h6 {
   #task2 .form {
     display: flex;
     flex-direction: column; }
-    #task2 .form .invalid {
-      border: 2px solid red; }
-    #task2 .form .valid {
-      border: 2px solid green; }
-    #task2 .form .error-msg {
-      color: red; }
+    #task2 .form div {
+      display: flex;
+      flex-direction: column; }
+      #task2 .form div:not(:last-child) {
+        margin-bottom: 10px; }
+      #task2 .form div label {
+        margin-bottom: 5px; }
+      #task2 .form div input {
+        border: 2px solid #e8e8e8;
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+        font-weight: 600;
+        font-size: 20px; }
+        #task2 .form div input::placeholder {
+          font-weight: 600; }
+        #task2 .form div input .invalid {
+          border: 2px solid red; }
+        #task2 .form div input .valid {
+          border: 2px solid green; }
+    #task2 .form .btn-submit {
+      height: 30px;
+      width: 80px;
+      cursor: pointer;
+      background-color: #ffffff;
+      border: 2px solid #222222;
+      border-radius: 8px; }
 
 /*# sourceMappingURL=style.css.map */
