@@ -1,0 +1,18 @@
+{
+   "amount": 136480,
+   "countGoods": 2,
+   "contents": [
+      {
+         "id": 1,
+         "name": "iPhone 13 256Gb",
+         "price": 86990,
+         "quantity": 1
+      },
+      {
+         "id": 3,
+         "name": "Apple Watch Series 7",
+         "price": 49490,
+         "quantity": 1
+      }
+   ]
+}
