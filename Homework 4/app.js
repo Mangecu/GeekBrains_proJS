@@ -57,8 +57,8 @@ class Valid {
          phone: /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
          email: /^[\w.-]+@\w+\.[a-z]{2,4}$/i
       }
-      this._validForm();
       this.valid = false;
+      this._validForm();
    }
    /**
     * Метод для очистки полей от красного цвета перед новой проверкой
