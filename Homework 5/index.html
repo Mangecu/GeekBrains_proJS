@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/style.css">
+   <title>Apple Shop</title>
+</head>
+<body>
+   <div id="app">
+      <header class="header">
+         <div class="header__wrap container">
+            <a href="index.html">AppleShop</a>
+            <form action="#" class="header__form" @submit.prevent="filter">
+               <input type="text" class="header__input" v-model="userSearch">
+               <button class="header__btn-search" type="submit">
+                  <i class="fas fa-search"></i>
+               </button>
+            </form>
+            <div class="header__cart">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <button class="header__btn-cart">Корзина</button>
+               <div class="header__basket-container hidden">
+
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="main container">
+         <div class="items">
+            <div class="item" v-for="item of items" :key="item.id">
+               <img :src="item.img" alt="item.name">
+               <div class="item__name">{{item.name}}</div>
+               <div class="item__price">{{item.price.toFixed(2)}} р.</div>
+               <button class="item__btn" @click="addProduct(item)">Купить</button>
+            </div>
+         </div>
+      </main>
+   </div>
+   <script src="https://kit.fontawesome.com/6de9621b6b.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+   <script src="app.js"></script>
+</body>
+</html>
