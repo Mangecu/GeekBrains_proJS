@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import "_normalize"
+
+*
+   font-family: 'Lato', sans-serif
+   color: #222222
+
+.container
+   max-width: 1140px
+   margin: 0 auto
+   padding: 0 10px 0 10px
+
+#task1
+   display: flex
+   flex-direction: column
+   margin-top: 50px
+   .text
+      line-height: 25px
+      font-size: 20px
+   div
+      .btn1,
+      .btn2
+         height: 50px
+         width: 150px
+         padding: 0 5px 0 5px
+         background-color: #ffffff
+         border: 2px solid #222222
+         border-radius: 5px
+         font-weight: 600
+         margin-bottom: 20px
+         &:first-child
+            margin-right: 100px
+.line
+   display: flex
+   height: 2px
+   background-color: #222222
+
+
+#task2
+   margin-top: 20px
+   display: flex
+   .form
+      display: flex
+      flex-direction: column
+      div
+         display: flex
+         flex-direction: column
+         &:not(:last-child)
+            margin-bottom: 10px
+         label
+            margin-bottom: 5px
+         input
+            border: 2px solid #e8e8e8
+            border-radius: 5px
+            padding: 5px 10px 5px 10px
+            font-weight: 600
+            font-size: 20px
+            &::placeholder
+               font-weight: 600
+            .invalid
+               border: 2px solid red
+            .valid
+               border: 2px solid green
+      .btn-submit
+         height: 30px
+         width: 80px
+         cursor: pointer
+         background-color: #ffffff
+         border: 2px solid #222222
+         border-radius: 8px
