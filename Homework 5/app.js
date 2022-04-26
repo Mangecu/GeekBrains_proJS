@@ -4,23 +4,43 @@ const goods = new Vue({
    el:'#app',
    data: {
       catalogURL: '/catalogData.json',
+      basketURL: '/basket.json',
       items: [],
       filtered: [],
+      basketItems: [],
       userSearch: '',
       show: false
    },
    methods: {
-      filter() {
-         const regexp = new RegExp(this.userSearch, 'i');
-         this.filtered = this.items.filter(item => regexp.test(item.name));
-      },
       getJSON(url) {
          return fetch(url)
                  .then(source => source.json())
                  .catch(error => console.log(error))
       },
+      filter() {
+         if (!this.userSearch.length) {
+            this.filtered = this.items;
+         } else {
+            const regexp = new RegExp(this.userSearch, 'i');
+            this.filtered = this.filtered.filter(item => regexp.test(item.name));
+            console.log(this.filtered);
+         }
+      },
       addProduct(item) {
-         console.log(item);
+         let find = this.basketItems.find(basketItem => basketItem.id === item.id);
+         if(find){
+            find.quantity++;
+         } else {
+            const prod = Object.assign({quantity: 1}, item);
+            this.basketItems.push(prod)
+         }
+      },
+      removeItem(basketItem) {
+         if(basketItem.quantity > 1){
+            basketItem.quantity--;
+         } else {
+            this.basketItems.splice(this.basketItems.indexOf(basketItem), 1);
+         }
       }
    },
    mounted() {
@@ -28,126 +48,16 @@ const goods = new Vue({
               .then(items => {
                  for (let item of items) {
                     this.items.push(item);
+                    this.filtered.push(item);
                  }
               });
+      this.getJSON(`${API + this.basketURL}`)
+              .then(basketItems => {
+                 for (let basketItem of basketItems.contents) {
+                    this.basketItems.push(basketItem);
+                 }
+              })
    }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-class ProductList {
-   constructor() {
-      this._fetchProducts()
-         .then(data => {
-            this.goods = [...data];
-            this.render()
-         });
-   }
-
-   _fetchProducts() {
-      return fetch(`${API}/catalogData.json`)
-         .then(source => source.json())
-         .catch(error => {
-           console.log(error)
-         })
-   }
-
-   render() {
-      for (let product of this.goods) {
-         const item = new ProductItem(product);
-         itemsContainer.insertAdjacentHTML("beforeend", item.render());
-      }
-   }
-}
-
-class ProductItem{
-   constructor(product) {
-      this.name = product.name;
-      this.id = product.id;
-      this.price = product.price;
-   }
-   render() {
-      return `
-         <div class="item">
-            <img src="https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-3/Homework%203/img/Item${this.id}.jpg" alt="${this.name}">
-            <div class="item__name">${this.name}</div>
-            <div class="item__price">${(this.price).toFixed(2)} р.</div>
-            <button class="item__btn">Купить</button>     
-         </div>`
-   }
-}
-
-new ProductList();
-
-//________Корзина___________//
-
-class Cart {
-   constructor() {
-      this._fetchCartItem()
-         .then(data => {
-           this.goods = [...data.contents];
-           this.render();
-         })
-      this._clickCart();
-   }
-   _fetchCartItem() {
-      return fetch(`${API}/basket.json`)
-         .then(basketSource => basketSource.json())
-         .catch(error => {
-           console.log(error);
-         })
-   }
-   _clickCart() {
-      cartBtn.addEventListener('click', () => {
-         cartContainer.classList.toggle('hidden');
-      })
-   }
-   render() {
-      for (let product of this.goods) {
-         const basketItem = new BasketItem();
-         console.log(basketItem);
-         cartContainer.insertAdjacentHTML('beforeend', basketItem.render(product));
-      }
-   }
-}
-
-class BasketItem {
-   render(product) {
-      return `
-         <div class="header__cart-item">
-            <div class="header__item-img">
-               <img src="https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-3/Homework%203/img/Item${product.id}.jpg" alt="${product.name}">
-            </div>
-            <div class="header__item-info">
-               <p class="header__item-title">${product.name}</p>
-               <p class="header__item-quantity">Quantity: ${product.quantity} шт.</p>
-               <p class="header__item-price">Price: ${product.price} р.</p>
-            </div>
-            <div>
-               <p class="header__item-totalPrice">${product.quantity * product.price} р.</p>
-            </div>
-            <div class="header__btn-del">
-               <i class="fa-solid fa-circle-xmark"></i>
-            </div>
-         </div>
-      `
-   }
-}
-
-new Cart();
-*/
-
 
 
