@@ -114,27 +114,39 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   flex-grow: 1;
 }
+.header .header__wrap .header__form .header__input {
+  background-color: #f8f3f4;
+  border-bottom: 2px solid #a9a9a9;
+  border-left: 2px solid #a9a9a9;
+  padding: 2px 5px 2px 5px;
+  border-radius: 0 0 0 5px;
+  font-size: 24px;
+  color: #a9a9a9;
+}
+.header .header__wrap .header__form .header__btn-search {
+  background-color: #f8f3f4;
+}
+.header .header__wrap .header__form .header__btn-search i {
+  font-size: 24px;
+  margin: 0 20px 0 10px;
+  color: #a9a9a9;
+}
 .header .header__wrap .header__cart {
+  background-color: #f8f3f4;
   height: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 40px;
 }
 .header .header__wrap .header__cart i {
   font-size: 24px;
   margin-right: 10px;
 }
 .header .header__wrap .header__cart .header__btn-cart {
+  background-color: #f8f3f4;
   font-size: 24px;
-  font-family: "Lato", sans-serif;
-  background-color: #ffffff;
-  border: 2px solid #e8e8e8;
-  padding: 2px 5px 2px 5px;
-  border-radius: 5px;
   position: relative;
-}
-.header .header__wrap .header__cart .hidden {
-  display: none;
 }
 
 /*_____Стили корзины_____*/
@@ -146,7 +158,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 50px;
   border: 2px solid #e8e8e8;
 }
-.header__basket-container .header__cart-item {
+.header__basket-container .header__basket-empty {
+  background-color: #ffffff;
+  padding: 10px 20px 10px 20px;
+}
+.header__basket-container .header__basket-item {
   height: 80px;
   width: 350px;
   display: flex;
@@ -155,58 +171,59 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   background-color: #ffffff;
 }
-.header__basket-container .header__cart-item:not(:last-child) {
+.header__basket-container .header__basket-item:not(:last-child) {
   border-bottom: 2px solid #e8e8e8;
 }
-.header__basket-container .header__cart-item .header__item-img {
+.header__basket-container .header__basket-item .header__item-img {
   display: flex;
   align-items: center;
 }
-.header__basket-container .header__cart-item .header__item-img img {
+.header__basket-container .header__basket-item .header__item-img img {
   height: 70px;
   width: 70px;
   border-radius: 10px;
 }
-.header__basket-container .header__cart-item .header__item-info {
+.header__basket-container .header__basket-item .header__item-info {
   height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.header__basket-container .header__cart-item .header__item-totalPrice {
+.header__basket-container .header__basket-item .header__item-totalPrice {
   display: flex;
 }
-.header__basket-container .header__cart-item .header__btn-del {
+.header__basket-container .header__basket-item .header__btn-del {
+  cursor: pointer;
   display: flex;
 }
 
 /*________________________*/
-.main .items {
+.main .main__items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.main .items .item {
+.main .main__items .main__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main .items .item img {
+.main .main__items .main__item img {
   height: 224px;
   width: 204px;
 }
-.main .items .item .item__name {
+.main .main__items .main__item .main__item-name {
   font-size: 20px;
   font-weight: 600;
   margin-top: 7px;
 }
-.main .items .item .item__price {
+.main .main__items .main__item .main__item-price {
   font-size: 18px;
   font-weight: 600;
   margin-top: 10px;
 }
-.main .items .item .item__btn {
+.main .main__items .main__item .main__item-btn {
   margin-top: 8px;
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -215,24 +232,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2px 5px 2px 5px;
   border-radius: 5px;
 }
-.main .items .item:not(:last-child) {
+.main .main__items .main__item:not(:last-child) {
   margin-bottom: 10px;
-}
-.main .items__total-sum {
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-.main .items__total-sum p {
-  font-size: 20px;
-  font-weight: 600;
-  border: 2px solid #6f6e6e;
-  border-radius: 5px;
-  padding: 10px 5px 10px 5px;
-}
-.main .items__total-sum p span {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
