@@ -19,21 +19,38 @@
                </button>
             </form>
             <div class="header__cart">
-               <i class="fa-solid fa-cart-shopping"></i>
-               <button class="header__btn-cart">Корзина</button>
-               <div class="header__basket-container hidden">
-
+               <button class="header__btn-cart" type="button" @click="show = !show">
+                  <i class="fa-solid fa-cart-shopping"></i>
+               </button>
+               <div class="header__basket-container" v-show="show">
+                  <p class="header__basket-empty" v-if="!basketItems.length">Корзина пустая</p>
+                  <div class="header__basket-item" v-for="basketItem of basketItems" :key="basketItem.id">
+                     <div class="header__item-img">
+                        <img :src="basketItem.img" alt="item.name">
+                     </div>
+                     <div class="header__item-info">
+                        <p class="header__item-title">{{ basketItem.name }}</p>
+                        <p class="header__item-quantity">Quantity: {{ basketItem.quantity }} шт.</p>
+                        <p class="header__item-price">Price: {{ basketItem.price }} р.</p>
+                     </div>
+                     <div>
+                        <p class="header__item-totalPrice">{{ basketItem.quantity * basketItem.price }} р.</p>
+                     </div>
+                     <div class="header__btn-del" @click="removeItem(basketItem)">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
       </header>
       <main class="main container">
-         <div class="items">
-            <div class="item" v-for="item of items" :key="item.id">
+         <div class="main__items">
+            <div class="main__item" v-for="item of filtered" :key="item.id">
                <img :src="item.img" alt="item.name">
-               <div class="item__name">{{item.name}}</div>
-               <div class="item__price">{{item.price.toFixed(2)}} р.</div>
-               <button class="item__btn" @click="addProduct(item)">Купить</button>
+               <div class="main__item-name">{{item.name}}</div>
+               <div class="main__item-price">{{item.price.toFixed(2)}} р.</div>
+               <button class="main__item-btn" @click="addProduct(item)">Купить</button>
             </div>
          </div>
       </main>
