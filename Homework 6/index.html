@@ -12,51 +12,24 @@
       <header class="header">
          <div class="header__wrap container">
             <a href="index.html">AppleShop</a>
-            <form action="#" class="header__form" @submit.prevent="filter">
-               <input type="text" class="header__input" v-model="userSearch">
-               <button class="header__btn-search" type="submit">
-                  <i class="fas fa-search"></i>
-               </button>
-            </form>
+            <search :userSearch="userSearch"></search>
             <div class="header__cart">
                <button class="header__btn-cart" type="button" @click="show = !show">
                   <i class="fa-solid fa-cart-shopping"></i>
                </button>
-               <div class="header__basket-container" v-show="show">
-                  <p class="header__basket-empty" v-if="!basketItems.length">Корзина пустая</p>
-                  <div class="header__basket-item" v-for="basketItem of basketItems" :key="basketItem.id">
-                     <div class="header__item-img">
-                        <img :src="basketItem.img" alt="item.name">
-                     </div>
-                     <div class="header__item-info">
-                        <p class="header__item-title">{{ basketItem.name }}</p>
-                        <p class="header__item-quantity">Quantity: {{ basketItem.quantity }} шт.</p>
-                        <p class="header__item-price">Price: {{ basketItem.price }} р.</p>
-                     </div>
-                     <div>
-                        <p class="header__item-totalPrice">{{ basketItem.quantity * basketItem.price }} р.</p>
-                     </div>
-                     <div class="header__btn-del" @click="removeItem(basketItem)">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                     </div>
-                  </div>
-               </div>
+               <basket :basket-items="basketItems" :visibility="show"></basket>
             </div>
          </div>
       </header>
       <main class="main container">
-         <div class="main__items">
-            <div class="main__item" v-for="item of filtered" :key="item.id">
-               <img :src="item.img" alt="item.name">
-               <div class="main__item-name">{{item.name}}</div>
-               <div class="main__item-price">{{item.price.toFixed(2)}} р.</div>
-               <button class="main__item-btn" @click="addProduct(item)">Купить</button>
-            </div>
-         </div>
+         <items :items="filtered" @add-product="addProduct"></items>
       </main>
    </div>
    <script src="https://kit.fontawesome.com/6de9621b6b.js" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-   <script src="app.js"></script>
+   <script src="js/components/ProductsComponents.js"></script>
+   <script src="js/components/CartComponent.js"></script>
+   <script src="js/components/FilterComponent.js"></script>
+   <script src="js/app.js"></script>
 </body>
 </html>
