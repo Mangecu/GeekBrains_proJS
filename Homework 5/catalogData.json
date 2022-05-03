@@ -1,0 +1,26 @@
+[
+   {
+      "id": 1,
+      "name": "iPhone",
+      "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-5/Homework%205/img/Item1.jpg",
+      "price": 86990
+   },
+   {
+      "id": 2,
+      "name": "MacBook",
+      "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-5/Homework%205/img/Item2.jpg",
+      "price": 309990
+   },
+   {
+      "id": 3,
+      "name": "Watch",
+      "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-5/Homework%205/img/Item3.jpg",
+      "price": 49490
+   },
+   {
+      "id": 4,
+      "name": "iPad",
+      "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-5/Homework%205/img/Item4.jpg",
+      "price": 139990
+   }
+]
