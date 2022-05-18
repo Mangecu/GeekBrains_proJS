@@ -1,0 +1,20 @@
+{
+   "amount": 136480,
+   "countGoods": 2,
+   "contents": [
+      {
+         "id": 1,
+         "name": "iPhone",
+         "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-7/Homework%207/img/Item1.jpg",
+         "price": 86990,
+         "quantity": 1
+      },
+      {
+         "id": 3,
+         "name": "Watch",
+         "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-7/Homework%207/img/Item3.jpg",
+         "price": 49490,
+         "quantity": 1
+      }
+   ]
+}
