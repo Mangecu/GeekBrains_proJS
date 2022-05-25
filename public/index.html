@@ -12,17 +12,18 @@
       <header class="header">
          <div class="header__wrap container">
             <a href="index.html">AppleShop</a>
-            <search :userSearch="userSearch"></search>
+            <search></search>
             <div class="header__cart">
                <button class="header__btn-cart" type="button" @click="show = !show">
                   <i class="fa-solid fa-cart-shopping"></i>
                </button>
-               <basket :basket-items="basketItems" :visibility="show"></basket>
+               <basket ref="basket"></basket>
             </div>
          </div>
       </header>
       <main class="main container">
-         <items :items="filtered" @add-product="addProduct"></items>
+         <error ref="error"></error>
+         <items ref="items"></items>
       </main>
    </div>
    <script src="https://kit.fontawesome.com/6de9621b6b.js" crossorigin="anonymous"></script>
@@ -30,6 +31,7 @@
    <script src="js/components/ProductsComponents.js"></script>
    <script src="js/components/CartComponent.js"></script>
    <script src="js/components/FilterComponent.js"></script>
-   <script src="js/app.js"></script>
+   <script src="js/components/ErrorComponents.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
