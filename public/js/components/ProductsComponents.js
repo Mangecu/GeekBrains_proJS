@@ -7,7 +7,7 @@ Vue.component('items', {
       }
    },
    mounted() {
-      this.$parent.getJSON(`/api/products`)
+      this.$parent.getJSON(`/api/items`)
          .then(data => {
             for (let item of data) {
                this.$data.items.push(item);
@@ -30,7 +30,7 @@ Vue.component('items', {
          <item v-for="item of filtered"
          :key="item.id"
          :item="item"
-         @add-product="$parent.$refs.basket.addProduct">
+         @add-product="$parent.$refs.cart.addProduct">
          </item>      
       </div>   
    `
