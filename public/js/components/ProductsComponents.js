@@ -30,7 +30,7 @@ Vue.component('items', {
          <item v-for="item of filtered"
          :key="item.id"
          :item="item"
-         @add-product="$parent.$refs.cart.addProduct">
+         @add-product="$parent.$refs.basket.addProduct">
          </item>      
       </div>   
    `
