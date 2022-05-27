@@ -1,4 +1,3 @@
-
 Vue.component('basket', {
    data(){
       return {
@@ -44,14 +43,19 @@ Vue.component('basket', {
       }
    },
    template: `
-      <div class="header__basket-container" v-show="show=!show">
-         <p class="header__basket-empty" v-if="!basketItems.length">Корзина пустая</p>
-         <basket-item v-for="basketItem of basketItems" 
-         :key="basketItem.id" 
-         :basketItem="basketItem"
-         @delete="deleteItem">         
-         </basket-item>
-      </div>  
+      <div class="header__cart">
+         <button class="header__btn-cart" type="button" @click="show = !show">
+           <i class="fa-solid fa-cart-shopping"></i>
+         </button>
+         <div class="header__basket-container" v-show="show">
+           <p class="header__basket-empty" v-if="!basketItems.length">Корзина пустая</p>
+           <basket-item v-for="basketItem of basketItems"
+            :key="basketItem.id"
+            :basketItem="basketItem"
+            @delete="deleteItem">
+           </basket-item>
+         </div> 
+      </div>
    `
 })
 
