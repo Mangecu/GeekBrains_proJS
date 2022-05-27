@@ -1,0 +1,107 @@
+.main__subscribe-wrap
+   min-height: 438px
+   background: url(https://raw.githubusercontent.com/Mangecu/GeekBrains_proHTML/gh_project/src/assets/imgs/subscribeBackground.jpg)
+   background-color: rgba(242, 242, 242, 0.5)
+   background-repeat: no-repeat
+   background-size: cover
+   background-position: bottom
+   background-blend-mode: soft-light
+   .main__subscribe
+      min-height: inherit
+      display: flex
+      flex-direction: row
+      .main__subscribe-leftBlock,
+      .main__subscribe-rightBlock
+         width: 50%
+      .main__subscribe-leftBlock
+         display: flex
+         flex-direction: column
+         justify-content: center
+         .main__subscribe-units
+            display: flex
+            flex-direction: row
+            margin-bottom: 41px
+            img
+               height: 83px
+               width: 83px
+               margin-right: 28px
+            .main__subscribe-info
+               .main__subscribe-discr
+                  font-size: 16px
+                  line-height: 26px
+                  font-weight: 700
+                  font-style: italic
+                  letter-spacing: 0.025em
+                  color: #222224
+                  margin-bottom: 19px
+                  max-width: 386px
+               .main__subscribe-name
+                  h2
+                     font-size: 16px
+                     line-height: 26px
+                     font-weight: 700
+                     letter-spacing: 0.025em
+                     color: #f16d7f
+                  h3
+                     font-size: 12px
+                     line-height: 14px
+                     font-weight: 700
+                     color: #222224
+         .main__subscribe-slider
+            display: flex
+            flex-direction: row
+            justify-content: center
+            li
+               height: 4px
+               width: 38px
+               background-color: #d6d6d6
+               transition: all 0.3s ease-in
+               cursor: pointer
+               &:not(:last-child)
+                  margin-right: 13px
+               &:hover
+                  background-color: #f16d7f
+      .main__subscribe-line
+         border-left: 1px solid #ffffff
+      .main__subscribe-rightBlock
+         display: flex
+         align-items: center
+         justify-content: center
+         .main__subscribe-promo
+            display: flex
+            flex-direction: column
+            align-items: center
+            h2,h3
+               font-size: 24px
+               text-transform: uppercase
+               letter-spacing: 0.025em
+               color: #222224
+            h3
+               font-size: 14px
+               text-transform: none
+               margin-top: 14px
+            .main__subscribe-form
+               max-width: 386px
+               height: 46px
+               display: flex
+               flex-direction: row
+               justify-content: center
+               margin-top: 35px
+               input
+                  width: 24.74vw
+                  padding-left: 28px
+                  height: inherit
+                  border-radius: 23px 0 0 23px
+                  background-color: #e1e1e1
+                  font-weight: 700
+                  &::placeholder
+                     opacity: 0.67
+                     color: #222224
+                     font-weight: 700
+               button
+                  background-color: #f16d7f
+                  color: #ffffff
+                  padding: 0 20px 0 21px
+                  border-radius: 0 23px 23px 0
+
+

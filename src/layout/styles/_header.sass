@@ -1,0 +1,131 @@
+.header__wrap
+   border-bottom: 1px solid #ececec
+   box-shadow: 0 0 10px 0 rgba(0,0,0,0.17)
+   .header
+      min-height: 100px
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      .header__logo
+         display: flex
+         flex-direction: row
+         flex-wrap: wrap
+         align-items: center
+         font-size: 27px
+         text-transform: uppercase
+         font-weight: 300
+         margin-right: 3%
+         img
+            margin-right: 0.85vw
+         span
+            color: #f16d7f
+            font-weight: 900
+      .header__form
+         flex-grow: 1
+         display: flex
+         flex-direction: row
+         .header__form-wrap
+            height: 37px
+            display: flex
+            flex-direction: row
+            align-items: center
+            .header__browse-btn
+               height: 37px
+               text-transform: capitalize
+               font-family: "Lato", sans-serif
+               font-size: 14px
+               font-weight: 300
+               background-color: #f8f8f8
+               border: 1px solid #e6e6e6
+               border-radius: 3px 0 0 3px
+               padding: 0 8px 0 14px
+               i
+                  transform: translateY(-15%)
+                  color: #838383
+                  padding-left: 5px
+            .header__browse-searsh
+               height: 37px
+               border-top: 1px solid #e6e6e6
+               border-bottom: 1px solid #e6e6e6
+               width: 18.16vw
+               min-width: 125px
+               padding-left: 15px
+               &::placeholder
+                  color: #a4a4a4
+                  font-weight: 300
+                  font-size: 14px
+            .header__browse-searsh-btn
+               height: inherit
+               border: 1px solid #e6e6e6
+               background-color: #ffffff
+               border-radius: 0 3px 3px 0
+               padding: 0 10px 0 11px
+               i
+                  color: #a4a4a4
+      .header__login
+         display: flex
+         flex-direction: row
+         align-items: center
+         height: 37px
+         .header__cart
+            align-self: end
+         .header__login-btn
+            height: inherit
+            text-transform: capitalize
+            font-size: 15px
+            background-color: #f16d7f
+            border: 1px solid #f16d7f
+            color: #ffffff
+            padding: 0 12px 0 18px
+            margin-left: 26px
+            i
+               transform: translateY(-17%)
+               padding-left: 5px
+               color: #ffffff
+.header__navigation
+   display: flex
+   justify-content: center
+   align-items: center
+   .header__nav-list
+      min-height: 41px
+      display: flex
+      flex-direction: row
+      align-items: center
+      .header__nav-item
+         &:not(:last-child)
+            margin-right: 2.2vw
+         .header__nav-link
+            text-transform: uppercase
+            font-weight: 700
+            align-self: center
+.header__breadcrumbs-wrap
+   background-color: #f8f3f4
+   min-height: 148px
+   .header__nav-breadcrumbs
+      min-height: inherit
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      .header__breadcrumbs-name
+         font-size: 24px
+         line-height: 20px
+         font-weight: 900
+         text-transform: uppercase
+         color: #f16d7f
+      .header__breadcrumbs
+         display: flex
+         flex-direction: row
+         &:nth-child(n)
+            line-height: 20px
+            font-weight: 400
+            text-transform: uppercase
+            color: #636363
+         li + li::before
+            content: "/"
+            color: #636363
+            padding: 0 5px
+         .header__breadcrumb-active
+            font-weight: 700
+            color: #f16d7f
