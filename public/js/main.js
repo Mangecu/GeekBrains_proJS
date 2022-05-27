@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-7/server/db/';
+const API = 'https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-7/server/db';
 
 const goods = new Vue({
    el:'#app',

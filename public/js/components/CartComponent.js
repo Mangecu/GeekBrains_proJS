@@ -35,12 +35,7 @@ Vue.component('basket', {
          }
       },
       deleteItem(basketItem) {
-         let find = this.basketItems.find(el => el.id === basketItem.id);
-         if (find && find.quantity > 1) {
-            find.quantity--;
-         } else {
-            this.basketItems.splice(this.basketItems.indexOf(basketItem));
-         }
+      // прописать код. Клик по кнопке идёт
       }
    },
    template: `
@@ -52,8 +47,8 @@ Vue.component('basket', {
            <p class="header__basket-empty" v-if="!basketItems.length">Корзина пустая</p>
            <basket-item v-for="basketItem of basketItems"
             :key="basketItem.id"
-            :basketItem="basketItem">
-             @deleteItem = "deleteItem"
+            :basketItem="basketItem" 
+            @deleteItem = "deleteItem">
            </basket-item>
          </div> 
       </div>
@@ -75,7 +70,7 @@ Vue.component('basket-item', {
          <div>
            <p class="header__item-totalPrice">{{ basketItem.quantity * basketItem.price }} р.</p>
          </div>
-         <div class="header__btn-del" @click="$emit(basketItem, 'deleteItem')">
+         <div class="header__btn-del" @click="$emit('deleteItem', basketItem)">
            <i class="fa-solid fa-circle-xmark"></i>
          </div>
       </div>   
