@@ -12,11 +12,17 @@ router.get('/', (req, res) => {
       }
    })
 });
-router.post('/', (req, res) => {
+
+router.post('/:id', (req, res) => {
    handler(req, res, 'add', 'server/db/cartData.json');
 });
+
 router.put('/:id', (req, res) => {
    handler(req, res, 'change', 'server/db/cartData.json');
+});
+
+router.delete('/:id', (req, res) => {
+   handler(req, res, 'remove', 'server/db/cartData.json');
 });
 
 module.exports = router;

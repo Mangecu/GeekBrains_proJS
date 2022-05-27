@@ -17,6 +17,5 @@ app.get('/api/items', (req, res) => {
    })
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listen on port ${port}...`));
+app.listen(3000, () => console.log('Listen on port 3000...'));
 

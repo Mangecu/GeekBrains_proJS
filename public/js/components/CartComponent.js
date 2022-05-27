@@ -10,7 +10,7 @@ Vue.component('basket', {
       this.$parent.getJSON (`/api/basket`)
          .then(data => {
             for (let basketItem of data.contents) {
-               this.$data.basketItems.push(basketItem);
+               this.basketItems.push(basketItem);
             }
          })
    },
@@ -18,25 +18,41 @@ Vue.component('basket', {
       addProduct(basketItem) {
          let find = this.basketItems.find(el => el.id === basketItem.id);
          if(find) {
-            this.$parent.putJSON (`/api/basket/${find.id}`, {quantity: 1})
+            this.$parent.putJSON (`/api/basket/${basketItem.id}`, {quantity: 1})
                .then(data => {
-                  if(data.result === 1) {
+                  if(data.result) {
                      find.quantity++;
                   }
                })
          } else {
             const newBasketItem = Object.assign({quantity: 1}, basketItem);
-            this.$parent.postJSON(`/api/basket`, newBasketItem)
+            this.$parent.postJSON(`/api/basket/${basketItem.id}`, newBasketItem)
                .then(data => {
-                  if(data.result === 1) {
+                  if(data.result) {
                      this.basketItems.push(newBasketItem);
                   }
                })
          }
       },
       deleteItem(basketItem) {
-      // прописать код. Клик по кнопке идёт
-      }
+         if(basketItem.quantity > 1) {
+            this.$parent.putJSON(`/api/basket/${basketItem.id}`, {quantity: -1})
+               .then(data => {
+                  if (data.result) {
+                     basketItem.quantity--;
+                  }
+               })
+         } else {
+            this.$parent.deleteJSON(`/api/basket/${basketItem.id}`, basketItem)
+               .then(data => {
+                  if (data.result) {
+                     this.basketItems.splice(this.basketItems.indexOf(basketItem), 1);
+                  } else {
+                     console.log('error');
+                  }
+               })
+         }
+      },
    },
    template: `
       <div class="header__cart">
