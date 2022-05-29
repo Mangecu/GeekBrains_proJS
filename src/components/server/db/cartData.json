@@ -1,0 +1,18 @@
+{
+   "contents": [
+      {
+         "id": 1,
+         "name": "Mango  People  T-shirt",
+         "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/src/assets/imgs/Featured_Item_1.jpg",
+         "price": 52,
+         "quantity": 1
+      },
+      {
+         "id": 8,
+         "name": "Mango  People  T-shirt",
+         "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/src/assets/imgs/Featured_Item_8.jpg",
+         "price": 52,
+         "quantity": 1
+      }
+   ]
+}
