@@ -1,0 +1,25 @@
+{
+    "contents": [
+        {
+            "id": 9,
+            "name": "Rebox Zane",
+            "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/src/assets/imgs/Cart_Item_9.jpg",
+            "price": 250,
+            "quantity": 1
+        },
+        {
+            "id": 10,
+            "name": "Rebox Zane",
+            "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/src/assets/imgs/Cart_Item_10.jpg",
+            "price": 250,
+            "quantity": 1
+        },
+        {
+            "quantity": 1,
+            "id": 3,
+            "name": "Mango  People  T-shirt",
+            "price": 52,
+            "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/src/assets/imgs/Featured_Item_3.jpg"
+        }
+    ]
+}
