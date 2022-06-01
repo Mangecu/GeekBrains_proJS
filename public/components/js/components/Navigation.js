@@ -1,7 +1,7 @@
 Vue.component('navigation', {
    template:`
-      <nav class="header__navigation container">
-         <ul class="header__nav-list">
+      <nav class="header__navigation ">
+         <ul class="header__nav-list container">
             <li class="header__nav-item">
                <a href="#" class="header__nav-link">Home</a>
             </li>

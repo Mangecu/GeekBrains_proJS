@@ -103,7 +103,7 @@ Vue.component('footer-background', {
       <section class="footer__wrap">
          <div class="footer__background container">
             <div class="footer__copy">
-               © 2020  Brand  All Rights Reserved.
+               © 2022  Brand  All Rights Reserved.
             </div>
             <div class="footer__social-links">
                <a href="#"><i class="fab fa-facebook-f"></i></a>

@@ -9,34 +9,36 @@
 </head>
 <body>
    <div id="app">
-      <div class="header__wrap">
-         <header class="header container">
-            <a href="index.html" class="header__logo">
-               <img src="https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/public/assets/imgs/logo.png" alt="logo">
-               bran<span>d</span>
-            </a>
-            <form action="#" class="header__form">
-               <div class="header__form-wrap">
-                  <button class="header__browse-btn">
-                     browse <i class="fa-solid fa-sort-down"></i>
-                  </button>
-                  <label>
-                     <input class="header__browse-searsh" placeholder="Search for Item..."  type="text">
-                  </label>
-                  <button class="header__browse-searsh-btn" type="submit">
-                     <i class="fa-solid fa-magnifying-glass"></i>
+      <header class="header__wrap">
+         <div class="header">
+            <div class="header__top container">
+               <a href="index.html" class="header__logo">
+                  <img src="https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/public/assets/imgs/logo.png" alt="logo">
+                  bran<span>d</span>
+               </a>
+               <form action="#" class="header__form">
+                  <div class="header__form-wrap">
+                     <button class="header__browse-btn">
+                        browse <i class="fa-solid fa-sort-down"></i>
+                     </button>
+                     <label>
+                        <input class="header__browse-searsh" placeholder="Search for Item..."  type="text">
+                     </label>
+                     <button class="header__browse-searsh-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                     </button>
+                  </div>
+               </form>
+               <cart ref="cart"></cart>
+               <div class="header__login">
+                  <button class="header__login-btn">
+                     my account <i class="fa-solid fa-sort-down"></i>
                   </button>
                </div>
-            </form>
-            <cart ref="cart"></cart>
-            <div class="header__login">
-               <button class="header__login-btn">
-                  my account <i class="fa-solid fa-sort-down"></i>
-               </button>
             </div>
-         </header>
-      </div>
-      <navigation></navigation>
+         </div>
+         <navigation></navigation>
+      </header>
       <main class="main">
          <section class="main__wrap">
             <div class="main__content container">

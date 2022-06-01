@@ -1,236 +1,220 @@
 .header__wrap
-   border-bottom: 1px solid #ececec
-   box-shadow: 0 0 10px 0 rgba(0,0,0,0.17)
+   display: flex
+   flex-direction: column
+   position: fixed
+   width: 100vw
+   top: 0
+   left: 0
+   z-index: 1
+   background-color: #ffffff
    .header
-      min-height: 100px
       display: flex
       flex-direction: row
       flex-wrap: wrap
       align-items: center
-      .header__logo
+      min-height: 100px
+      width: 100vw
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.17)
+      border-bottom: 1px solid #ececec
+      .header__top
          display: flex
          flex-direction: row
          flex-wrap: wrap
          align-items: center
-         font-size: 27px
-         text-transform: uppercase
-         font-weight: 300
-         margin-right: 3%
-         img
-            margin-right: 0.85vw
-         span
-            color: #f16d7f
-            font-weight: 900
-      .header__form
-         flex-grow: 1
-         display: flex
-         flex-direction: row
-         .header__form-wrap
-            height: 37px
+         width: 100vw
+         .header__logo
             display: flex
             flex-direction: row
+            flex-wrap: wrap
             align-items: center
-            .header__browse-btn
-               height: 37px
-               text-transform: capitalize
-               font-family: "Lato", sans-serif
-               font-size: 14px
-               font-weight: 300
-               background-color: #f8f8f8
-               border: 1px solid #e6e6e6
-               border-radius: 3px 0 0 3px
-               padding: 0 8px 0 14px
-               i
-                  transform: translateY(-15%)
-                  color: #838383
-                  padding-left: 5px
-            .header__browse-searsh
-               height: 37px
-               border-top: 1px solid #e6e6e6
-               border-bottom: 1px solid #e6e6e6
-               width: 18.16vw
-               min-width: 125px
-               padding-left: 15px
-               &::placeholder
-                  color: #a4a4a4
-                  font-weight: 300
-                  font-size: 14px
-            .header__browse-searsh-btn
-               height: inherit
-               border: 1px solid #e6e6e6
-               background-color: #ffffff
-               border-radius: 0 3px 3px 0
-               padding: 0 10px 0 11px
-               i
-                  color: #a4a4a4
-      .header__cart-block
-         position: relative
-         .header__cart-btn
-            background-color: #ffffff
-            position: relative
+            font-size: 27px
+            text-transform: uppercase
+            font-weight: 300
+            margin-right: 3%
+            img
+               margin-right: 0.85vw
             span
-               display: flex
-               align-items: center
-               justify-content: center
-               position: absolute
-               top: -8px
-               left: 22px
-               height: 19px
-               width: 19px
-               border-radius: 50%
-               background-color: #f16d7f
-               font-weight: 700
-               font-size: 12px
-               line-height: 35px
-               color: #ffffff
-         .header__cart-wrap
-            z-index: 1
-            position: absolute
-            left: -14px
-            top: 45px
-            background-color: #ffffff
-            padding: 5px 15px 5px 17px
-            border-radius: 5px
+               color: #f16d7f
+               font-weight: 900
+         .header__form
+            flex-grow: 1
             display: flex
-            flex-direction: column
-            .header__cart-empty
-               padding: 5px 10px 5px 10px
-               text-transform: uppercase
-               font-weight: 700
-            .header__cart-container
+            flex-direction: row
+            .header__form-wrap
+               height: 37px
                display: flex
-               flex-direction: column
-               .header__cart-item
-                  display: flex
-                  flex-direction: row
-                  align-items: center
-                  padding: 16px 0 16px 0
-                  border-bottom: 1px solid rgba(237,237,237,0.74)
-                  img
-                     width: 72px
-                     height: 85px
-                     margin-right: 15px
-                  .header__cart-item-info
-                     display: flex
-                     flex-direction: column
-                     width: 113px
-                     margin-right: 15px
-                     padding: 10px 0 19px 0
-                     .header__cart-item-name
-                        font-size: 12px
-                        line-height: 1.2
-                        font-weight: 700
-                        text-transform: uppercase
-                        margin-bottom: 10px
-                     .header__cart-item-count
-                        width: 60%
-                        justify-content: space-between
-                     .header__cart-item-count,
-                     .header__cart-item-count p,
-                     .header__cart-item-count span
-                        display: flex
-                        flex-direction: row
-                        font-size: 12px
-                        line-height: 1.2
-                        font-weight: 700
-                        text-transform: uppercase
-                        color: #f16d7f
-                  button
-                     background-color: #ffffff
-                     i
-                        color: #c0c0c0
-            .header__cart-check
-               display: flex
-               flex-direction: column
-               margin-top: 19px
-               .header__cart-total
-                  display: flex
-                  flex-direction: row
-                  justify-content: space-between
-                  font-size: 16px
-                  line-height: 1.2
-                  font-weight: 700
-                  text-transform: uppercase
-               .header__cart-checkBtn,
-               .header__cart-goToCartBtn
+               flex-direction: row
+               align-items: center
+               .header__browse-btn
+                  height: 37px
+                  text-transform: capitalize
+                  font-family: "Lato", sans-serif
+                  font-size: 14px
+                  font-weight: 300
+                  background-color: #f8f8f8
+                  border: 1px solid #e6e6e6
+                  border-radius: 3px 0 0 3px
+                  padding: 0 8px 0 14px
+                  i
+                     transform: translateY(-15%)
+                     color: #838383
+                     padding-left: 5px
+               .header__browse-searsh
+                  height: 37px
+                  border-top: 1px solid #e6e6e6
+                  border-bottom: 1px solid #e6e6e6
+                  width: 18.16vw
+                  min-width: 125px
+                  padding-left: 15px
+                  &::placeholder
+                     color: #a4a4a4
+                     font-weight: 300
+                     font-size: 14px
+               .header__browse-searsh-btn
+                  height: inherit
+                  border: 1px solid #e6e6e6
+                  background-color: #ffffff
+                  border-radius: 0 3px 3px 0
+                  padding: 0 10px 0 11px
+                  i
+                     color: #a4a4a4
+         .header__cart-block
+            position: relative
+            .header__cart-btn
+               background-color: #ffffff
+               position: relative
+               span
                   display: flex
                   align-items: center
                   justify-content: center
-                  background-color: #ffffff
-                  padding: 19px 0 19px 0
-                  border: 1px solid #eaeaea
-                  a
-                     line-height: 1.2
-                     font-weight: 700
-                     text-transform: uppercase
-               .header__cart-checkBtn
-                  margin-top: 32px
-                  border: 1px solid #f16d7f
-                  a
-                     color: #f16d7f
-               .header__cart-goToCartBtn
-                  margin: 11px 0 15px 0
-
-      .header__login
-         height: 37px
-         .header__cart
-            align-self: end
-         .header__login-btn
-            height: inherit
-            text-transform: capitalize
-            font-size: 15px
-            background-color: #f16d7f
-            border: 1px solid #f16d7f
-            color: #ffffff
-            padding: 0 12px 0 18px
-            margin-left: 26px
-            i
-               transform: translateY(-17%)
-               padding-left: 5px
+                  position: absolute
+                  top: -8px
+                  left: 22px
+                  height: 19px
+                  width: 19px
+                  border-radius: 50%
+                  background-color: #f16d7f
+                  font-weight: 700
+                  font-size: 12px
+                  line-height: 35px
+                  color: #ffffff
+            .header__cart-wrap
+               z-index: 1
+               position: absolute
+               left: -14px
+               top: 45px
+               background-color: #ffffff
+               padding: 5px 15px 5px 17px
+               border-radius: 5px
+               display: flex
+               flex-direction: column
+               .header__cart-empty
+                  padding: 5px 10px 5px 10px
+                  text-transform: uppercase
+                  font-weight: 700
+               .header__cart-container
+                  display: flex
+                  flex-direction: column
+                  .header__cart-item
+                     display: flex
+                     flex-direction: row
+                     align-items: center
+                     padding: 16px 0 16px 0
+                     border-bottom: 1px solid rgba(237,237,237,0.74)
+                     img
+                        width: 72px
+                        height: 85px
+                        margin-right: 15px
+                     .header__cart-item-info
+                        display: flex
+                        flex-direction: column
+                        width: 113px
+                        margin-right: 15px
+                        padding: 10px 0 19px 0
+                        .header__cart-item-name
+                           font-size: 12px
+                           line-height: 1.2
+                           font-weight: 700
+                           text-transform: uppercase
+                           margin-bottom: 10px
+                        .header__cart-item-count
+                           width: 60%
+                           justify-content: space-between
+                        .header__cart-item-count,
+                        .header__cart-item-count p,
+                        .header__cart-item-count span
+                           display: flex
+                           flex-direction: row
+                           font-size: 12px
+                           line-height: 1.2
+                           font-weight: 700
+                           text-transform: uppercase
+                           color: #f16d7f
+                     button
+                        background-color: #ffffff
+                        i
+                           color: #c0c0c0
+                  .header__cart-check
+                     display: flex
+                     flex-direction: column
+                     margin-top: 19px
+                     .header__cart-total
+                        display: flex
+                        flex-direction: row
+                        justify-content: space-between
+                        font-size: 16px
+                        line-height: 1.2
+                        font-weight: 700
+                        text-transform: uppercase
+                     .header__cart-checkBtn,
+                     .header__cart-goToCartBtn
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        background-color: #ffffff
+                        padding: 19px 0 19px 0
+                        border: 1px solid #eaeaea
+                        a
+                           line-height: 1.2
+                           font-weight: 700
+                           text-transform: uppercase
+                     .header__cart-checkBtn
+                        margin-top: 32px
+                        border: 1px solid #f16d7f
+                        a
+                           color: #f16d7f
+                     .header__cart-goToCartBtn
+                        margin: 11px 0 15px 0
+         .header__login
+            height: 37px
+            .header__login-btn
+               height: inherit
+               text-transform: capitalize
+               font-size: 15px
+               background-color: #f16d7f
+               border: 1px solid #f16d7f
                color: #ffffff
-.header__navigation
-   display: flex
-   justify-content: center
-   align-items: center
-   .header__nav-list
-      min-height: 41px
+               padding: 0 12px 0 18px
+               margin-left: 26px
+               i
+                  transform: translateY(-17%)
+                  padding-left: 5px
+                  color: #ffffff
+   .header__navigation
       display: flex
-      flex-direction: row
       align-items: center
-      .header__nav-item
-         &:not(:last-child)
-            margin-right: 2.2vw
-         .header__nav-link
-            text-transform: uppercase
-            font-weight: 700
-            align-self: center
-.header__breadcrumbs-wrap
-   background-color: #f8f3f4
-   min-height: 148px
-   .header__nav-breadcrumbs
-      min-height: inherit
-      display: flex
-      flex-direction: row
-      align-items: center
-      justify-content: space-between
-      .header__breadcrumbs-name
-         font-size: 24px
-         line-height: 20px
-         font-weight: 900
-         text-transform: uppercase
-         color: #f16d7f
-      .header__breadcrumbs
+      min-height: 50px
+      .header__nav-list
+         min-height: 41px
          display: flex
          flex-direction: row
-         &:nth-child(n)
-            line-height: 20px
-            font-weight: 400
-            text-transform: uppercase
-            color: #636363
-         li + li::before
-            content: "/"
-            color: #636363
-            padding: 0 5px
-         .header__breadcrumb-active
-            font-weight: 700
-            color: #f16d7f
+         flex-wrap: wrap
+         align-items: center
+         justify-content: center
+         .header__nav-item
+            &:not(:last-child)
+               margin-right: 2.2vw
+            .header__nav-link
+               text-transform: uppercase
+               font-weight: 700
+               align-self: center
