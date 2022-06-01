@@ -188,10 +188,15 @@ h1, h2, h3, h4, h5, h6 {
   left: -14px;
   top: 45px;
   background-color: #ffffff;
-  padding: 5px 15px 20px 17px;
+  padding: 5px 15px 5px 17px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+}
+.header__wrap .header .header__cart-block .header__cart-wrap .header__cart-empty {
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .header__wrap .header .header__cart-block .header__cart-wrap .header__cart-container {
   display: flex;
@@ -224,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 .header__wrap .header .header__cart-block .header__cart-wrap .header__cart-container .header__cart-item .header__cart-item-info .header__cart-item-count {
-  width: 52px;
+  width: 60%;
   justify-content: space-between;
 }
 .header__wrap .header .header__cart-block .header__cart-wrap .header__cart-container .header__cart-item .header__cart-item-info .header__cart-item-count,
@@ -281,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #f16d7f;
 }
 .header__wrap .header .header__cart-block .header__cart-wrap .header__cart-check .header__cart-goToCartBtn {
-  margin-top: 11px;
+  margin: 11px 0 15px 0;
 }
 .header__wrap .header .header__login {
   height: 37px;

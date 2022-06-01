@@ -30,7 +30,7 @@ Vue.component('fetured-item', {
    template:`
       <div class="main__item">
          <div class="main__item-info">
-            <img :src="feturedItem.img" alt="{{ feturedItem.name }}">
+            <img :src="feturedItem.img" :alt= "feturedItem.name">
             <div class="main__item-disc">
                <h3>{{ feturedItem.name }}</h3>
                <h3>$ {{ feturedItem.price.toFixed(2) }}</h3>

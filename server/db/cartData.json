@@ -1,18 +1,3 @@
 {
-    "contents": [
-        {
-            "id": 9,
-            "name": "Rebox Zane",
-            "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/public/assets/imgs/Cart_Item_9.jpg",
-            "price": 250,
-            "quantity": 1
-        },
-        {
-            "id": 10,
-            "name": "Rebox Zane",
-            "img": "https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/public/assets/imgs/Cart_Item_10.jpg",
-            "price": 250,
-            "quantity": 1
-        }
-    ]
+    "contents": []
 }
