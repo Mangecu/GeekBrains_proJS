@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": ""
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "jasmine-core": "^4.1.1",
     "moment": "^2.29.3",
     "node-static": "^0.7.11",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
