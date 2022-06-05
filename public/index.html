@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="layout/styles/style.css">
+	<title>Index Page</title>
+</head>
+<body>
+   <div id="app">
+      <header class="header__wrap">
+         <div class="header">
+            <div class="header__top container">
+               <a href="index.html" class="header__logo">
+                  <img src="https://raw.githubusercontent.com/Mangecu/GeekBrains_proJS/Homework-8/public/assets/imgs/logo.png" alt="logo">
+                  bran<span>d</span>
+               </a>
+               <form action="#" class="header__form">
+                  <div class="header__form-wrap">
+                     <button class="header__browse-btn">
+                        browse <i class="fa-solid fa-sort-down"></i>
+                     </button>
+                     <label>
+                        <input class="header__browse-searsh" placeholder="Search for Item..."  type="text">
+                     </label>
+                     <button class="header__browse-searsh-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                     </button>
+                  </div>
+               </form>
+               <cart ref="cart"></cart>
+               <div class="header__login">
+                  <button class="header__login-btn">
+                     my account <i class="fa-solid fa-sort-down"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <navigation></navigation>
+      </header>
+      <main class="main">
+         <section class="main__wrap">
+            <div class="main__content container">
+               <div class="main__name">
+                  <h2>the brand</h2>
+                  <h2>of luxerious <span>fashion</span></h2>
+               </div>
+            </div>
+         </section>
+         <offers></offers>
+         <section class="main__fetured container">
+            <div class="main__fetured-title">
+               <h2>Fetured Items</h2>
+               <p>Shop for items based on what we featured in this week</p>
+            </div>
+            <error ref="error"></error>
+            <fetured-items ref="feturedItems"></fetured-items>
+            <button class="main__fetured-btn">Browse All Product <i class="fas fa-long-arrow-alt-right"></i></button>
+         </section>
+         <feature></feature>
+         <subscribe></subscribe>
+      </main>
+      <footer-component></footer-component>
+   </div>
+   <script src="https://kit.fontawesome.com/6de9621b6b.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+   <script src="./components/js/components/CartComponent.js"></script>
+   <script src="./components/js/components/ErrorComponent.js"></script>
+   <script src="./components/js/components/FeatureComponent.js"></script>
+   <script src="./components/js/components/FeturedItemsComponent.js"></script>
+   <script src="./components/js/components/FooterComponent.js"></script>
+   <script src="./components/js/components/NavigationComponent.js"></script>
+   <script src="./components/js/components/OfferComponent.js"></script>
+   <script src="./components/js/components/SubscribeComponent.js"></script>
+<!--   <script src="webpack/assembly.js"></script>-->
+   <script src="components/js/main.js"></script>
+
+</body>
+</html>
